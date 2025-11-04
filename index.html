@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+     <div class="container row">
+        <div class="brand">
+            <div class="logo">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#074e96;stop-opacity:1"/>
+          <stop offset="100%" style="stop-color:#1d5696;stop-opacity:1"/>
+        </linearGradient>
+      </defs>
+      <circle cx="24" cy="24" r="20" fill="url(#grad1)"/>
+      <path d="M17 18L12 24L17 30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M31 18L36 24L31 30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21 34L27 14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+            </div>
+            <div class="title">CodeFlow --- Live in Browser</div>
+        </div>
+
+        <div class="row">
+            <button class="btn secondary" id="saveBtn" title="Save work locally"><span>save</span></button>
+            <button class="btn secondary" id="loadBtn" title="load work file"><span>Load</span></button>
+            <input id="openFile" type="file" accept="application/json" hidden >
+        </div>
+     </div>   
+    </header>
+    <main>
+     <aside class="card panel stack">
+      <h2>Task / Assingment</h2> 
+      <textarea class="text" id="assigment" placeholder="Write the task description here....."></textarea> 
+
+      <div class="stack">
+        <label for="textarea">Valodation tests (Javascript only - optional)</label>
+        <textarea class="text" id="textarea" placeholder="Write simple text to appear"></textarea>
+      </div>
+
+      <div class="muted">
+      TIP: <span class="kbd"> Ctrl</span> + <span class="kbd">S</span> to save,
+      <span class="kbd">Ctrl</span> + S
+      </div>
+     </aside>   
+
+     <section class="stack" id="web-only">
+
+      <div id="webEditors" class="stack panel card">
+           <div class="row">
+            <h2>HTML / CSS / JS</h2>
+            <div class="row">
+               <button class="btn ok" id="runweb">Run</button>
+               <button class="btn secondary" id="openPreview"> Open Preview in a new window.</button>
+            </div>
+           </div> 
+
+
+        <div class="tabs" id="webTabs" role="tablist" aria-label="webEditors">
+            <button class="tab active" role="tab" aria-selected="true" tabindex="0" data-pane="html">HTML</button>
+            <button class="tab" role="tab" aria-selected="false" tabindex="-1" data-pane="css">CSS</button>
+            <button class="tab" role="tab" aria-selected="false" tabindex="-1" data-pane="js">JS</button>
+        </div>  
+        
+        <div class="editor-wrap" data-pane="html">
+          <div id="ed_html" class="editor"></div>
+        </div>
+
+      <div class="editor-wrap" data-pane="css" hidden>
+          <div id="ed_css" class="editor"></div>
+        </div>
+        
+
+       <div class="editor-wrap" data-pane="js" hidden>
+          <div id="ed_js" class="editor"></div>
+        </div>
+
+
+        <div class="stack">
+          <h3>Preview</h3>
+          <iframe id="Preview" class="Preview" sandbox="allow-scripts allow-same-origin allow-modals allow-forms"></iframe>
+
+        </div>
+
+      </div>
+
+     </section>
+
+     <aside class="card pannel stack">
+       <h2>Output</h2>
+       <div id="output" class="out" aria-live="polite"></div>
+       <div class="row">
+        <button class="btn warn" id="runTest">Run with tests</button>
+        <button class="btn err"> clear log</button>
+       </div>
+       <h3> Notes</h3>
+       <ul class="muted">
+         <li>Everything runs inside the browser in  a sandbox</li>
+         <li>You can save the work as a JSON file and restore it....</li>
+       </ul>
+     </aside>
+    </main>
+
+    <div class="footer"> &copy; 2025 PARADOXICAL - All right reserved.</div>
+</body>
+</html>
