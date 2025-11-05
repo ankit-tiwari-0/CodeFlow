@@ -199,3 +199,54 @@ h2, h3{
   background: linear-gradient(180deg, #fb7185, #ef4444);
   color: #1f1f1f;
 }
+ 
+.select, select, .text{
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--txt);
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+textarea.text{
+  width: 100%;
+  min-height: 120px;
+
+}
+
+
+.tabs{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab{
+  margin-left: 5px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.tab.active{
+  background: linear-gradient(180deg, rgba(125, 211, 252, 0.18), rgba(96, 165, 255, 0.18 ) );
+  color: #34d399;
+}
+
+
+.editor-wrap{
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.12 );
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 300px;
+  background-color: #0b1020;
+  margin: 5px;
+  top: 20px;
+
+}
+
