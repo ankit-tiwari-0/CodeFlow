@@ -243,10 +243,50 @@ textarea.text{
   border: 1px solid rgba(255, 255, 255, 0.12 );
   border-radius: 14px;
   overflow: hidden;
-  min-height: 300px;
+  min-height: 280px;
   background-color: #0b1020;
   margin: 5px;
-  top: 20px;
 
 }
 
+.editor{
+  inline-size: 100%;
+  block-size: 380px;
+}
+
+iframe.Preview{
+  inline-size: 100%;
+  block-size: 380px;
+  border: solid 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 15px;
+  background-color: #5d5b5b;
+}
+
+.out{
+  background-color: #0a0e1a;
+  border: 1px solid rgb(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 400px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.footer{
+  opacity: 0.7;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+}
+
+.kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Cascadia Code", monospace;
+  background-color: #0e1324;
+  border-radius: 8px;
+  padding: 2px 5px ;
+}
+
+.label{
+  font-size: 15px;
+  color: var(--muted);
+}
